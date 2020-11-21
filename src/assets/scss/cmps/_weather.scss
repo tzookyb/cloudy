@@ -1,0 +1,8 @@
+
+.mode-btn {
+}
+.location-mode-active,
+.weather-mode-active {
+    background-color: darken($color: $clr3, $amount: 20);
+    box-shadow: inset 0px 0px 5px #c1c1c1
+}

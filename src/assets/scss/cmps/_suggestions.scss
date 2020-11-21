@@ -1,0 +1,15 @@
+.suggest-list {
+    width: 100%;
+    background-color: $clr2;
+}
+.suggest {
+    background-color: darken($color: $clr1, $amount: 5);
+    margin-bottom: 5px;
+    padding: 10px;
+    &:nth-child(2n) {
+        background-color: darken($color: $clr1, $amount: 15);
+    }
+    &:hover {
+        background-color: rgb(192, 192, 192);
+    }
+}

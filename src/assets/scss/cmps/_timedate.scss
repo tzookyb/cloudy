@@ -1,0 +1,11 @@
+.time {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 10px solid lighten($clr4, $amount: 2);
+    border-radius: 10px;
+    background-color: $clr4;
+
+    .clock {
+        width: 100%;
+    }
+}

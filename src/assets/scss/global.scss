@@ -1,0 +1,18 @@
+@import "./setup/variables";
+@import "./setup/functions";
+@import "./setup/helpers";
+@import "./setup/layout";
+@import "./setup/typography";
+@import "./setup/base";
+@import "./setup/animations";
+
+// COMPONENTS
+@import "./cmps/header";
+@import "./cmps/timedate";
+@import "./cmps/about";
+@import "./cmps/weather";
+@import "./cmps/location";
+@import "./cmps/suggestions";
+@import "./cmps/current";
+@import "./cmps/forecast";
+@import "./cmps/footer";
