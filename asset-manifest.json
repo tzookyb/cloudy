@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/cloudy/static/css/main.4988ae86.chunk.css",
+    "main.js": "/cloudy/static/js/main.40fc7d18.chunk.js",
+    "main.js.map": "/cloudy/static/js/main.40fc7d18.chunk.js.map",
+    "runtime-main.js": "/cloudy/static/js/runtime-main.c32e614d.js",
+    "runtime-main.js.map": "/cloudy/static/js/runtime-main.c32e614d.js.map",
+    "static/js/2.4fb8499e.chunk.js": "/cloudy/static/js/2.4fb8499e.chunk.js",
+    "static/js/2.4fb8499e.chunk.js.map": "/cloudy/static/js/2.4fb8499e.chunk.js.map",
+    "static/js/3.1cb1aa90.chunk.js": "/cloudy/static/js/3.1cb1aa90.chunk.js",
+    "static/js/3.1cb1aa90.chunk.js.map": "/cloudy/static/js/3.1cb1aa90.chunk.js.map",
+    "index.html": "/cloudy/index.html",
+    "static/css/main.4988ae86.chunk.css.map": "/cloudy/static/css/main.4988ae86.chunk.css.map",
+    "static/js/2.4fb8499e.chunk.js.LICENSE.txt": "/cloudy/static/js/2.4fb8499e.chunk.js.LICENSE.txt",
+    "static/media/global.scss": "/cloudy/static/media/bg.2427a6dd.jpg",
+    "static/media/github-original.fad4b944.svg": "/cloudy/static/media/github-original.fad4b944.svg",
+    "static/media/linkedin-original.6494960c.svg": "/cloudy/static/media/linkedin-original.6494960c.svg",
+    "static/media/logo.png": "/cloudy/static/media/logo.e50c6087.png",
+    "static/media/mobx.b2519d0d.svg": "/cloudy/static/media/mobx.b2519d0d.svg",
+    "static/media/react-original.7098e271.svg": "/cloudy/static/media/react-original.7098e271.svg",
+    "static/media/sass-original.8ec16938.svg": "/cloudy/static/media/sass-original.8ec16938.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c32e614d.js",
+    "static/js/2.4fb8499e.chunk.js",
+    "static/css/main.4988ae86.chunk.css",
+    "static/js/main.40fc7d18.chunk.js"
+  ]
+}
