@@ -7,6 +7,7 @@ export const LocationModeSelector = observer(() => {
     const store = useContext(StoreContext);
 
     const setMode = action((mode) => {
+        if (store.locationMode === mode) return;
         store.weatherInfo = null;
         store.locationMode = mode
     });

@@ -39,7 +39,8 @@ export const Location = observer(() => {
     }, [locationMode])
 
     const handleInput = (value) => {
-        console.log(value);
+        runInAction(() => store.weatherInfo = null);
+        setSuggestions([]);
         setSearchTerm(value);
         setIsSearching(true);
         debouncedSearch(value);
@@ -74,7 +75,7 @@ export const Location = observer(() => {
             <div>
 
                 {!isMyLocation && isSearching && <WindMillLoading size="large" className="loading" />}
-                {!!suggestions.length && <Suggestions searchTerm={searchTerm} pickLocation={pickLocation} places={suggestions} setSearchTerm={setSearchTerm} />}
+                {!isMyLocation && !!searchTerm && <Suggestions isSearching={isSearching} pickLocation={pickLocation} places={suggestions} setSearchTerm={setSearchTerm} />}
 
 
             </div>
