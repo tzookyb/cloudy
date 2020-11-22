@@ -1,11 +1,19 @@
 .time {
-    margin-bottom: 10px;
-    padding: 5px;
+    max-width: 400px;
+    width: 50vw;
+    padding: 1rem;
     border: 10px solid lighten($clr4, $amount: 2);
     border-radius: 10px;
     background-color: $clr4;
-    // opacity: 0.7;
-    .clock {
-        width: 100%;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    > * {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    .time {
+        width: initial;
     }
 }

@@ -2,11 +2,11 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { store } from './store'
 // CMPS
-import Header from './cmps/Header'
+import { Header } from './cmps/Header'
 import { TimeDate } from './cmps/TimeDate'
-import About from './cmps/About'
+import { About } from './cmps/About'
 import { Weather } from './cmps/Weather'
-import Footer from './cmps/Footer'
+import { Footer } from './cmps/Footer'
 
 // STORE:
 export const StoreContext = React.createContext();
@@ -21,10 +21,10 @@ export default function App() {
       <div className="app flex column">
         <Header />
         <main>
-          <TimeDate />
           <Switch>
             <Route component={About} path="/about" />
-            <Route component={Weather} path="/" />
+            <Route component={Weather} path="/weather" />
+            <Route component={TimeDate} path="/" />
           </Switch>
         </main>
         <Footer />

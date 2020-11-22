@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import dayjs from 'dayjs'
+import { Link } from 'react-router-dom'
 
 export const TimeDate = () => {
     const intervalId = React.useRef(null)
@@ -33,19 +34,20 @@ export const TimeDate = () => {
     }
 
     return (
-        <section className="main-container">
-            <div className="time flex space-between">
+        <React.Fragment>
+            <div className="time flex column align-center space-around">
                 <div className="flex column space-between">
-                    <h3>{greet}</h3>
+                    <h2>{greet}</h2>
                 </div>
-                <div className="flex column flex-end gap10">
-                    <h4>Today is {date}</h4>
-                    <div className="clock flex space-between">
-                        <h4>The time now is: </h4>
-                        <h4>{time}</h4>
-                    </div>
-                </div>
+                <h3>Today is {date}</h3>
+                <h3>The time now is: </h3>
+                <h3>{time}</h3>
             </div>
-        </section >
+            <div className="cta-btn flex justify-center">
+                <Link to="/weather">
+                    <button>Check Weather</button>
+                </Link>
+            </div>
+        </React.Fragment>
     )
 }
