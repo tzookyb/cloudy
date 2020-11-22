@@ -13,20 +13,22 @@ export default function Current({ current, location, isMetric }) {
 
     return (
         <React.Fragment>
-                <h3 className="text-center">Current Weather:</h3>
-                <article className="current mb15">
-                    <div className="local-time">Local time: {localTime}</div>
-                    <small className="last-update">Forecast last updated at: {lastUpdated}</small>
-                    <h2 className="condition">{current.condition.text}</h2>
-                    <div className="condition-img"><img src={current.condition.icon} alt="condition" /></div>
-                    <div className="temp">Temperature: {temp}°{isMetric ? 'C' : 'F'}</div>
-                    <div className="feels">Feels Like: {feelsLike}°{isMetric ? 'C' : 'F'}</div>
-                    <div className="extra-info">
-                        <div className="precip">Precipitation: {precip}</div>
-                        <div className="humidity">Humidity: {current.humidity}%</div>
-                        <div className="wind">Wind: {wind}</div>
-                    </div>
-                </article>
+            <div className="current-title text-center">
+                <h3>Current Weather:</h3>
+                <small className="last-update">&#9;(as of {lastUpdated})</small>
+            </div>
+            <article className="current mb15">
+                <div className="local-time">Local time: {localTime}</div>
+                <h2 className="condition">{current.condition.text}</h2>
+                <div className="condition-img"><img src={current.condition.icon} alt="condition" /></div>
+                <h3 className="temp">Temperature: {temp}°{isMetric ? 'C' : 'F'}</h3>
+                <h3 className="feels">Feels Like: {feelsLike}°{isMetric ? 'C' : 'F'}</h3>
+                <div className="extra-info">
+                    <div className="precip">Precipitation: {precip}</div>
+                    <div className="humidity">Humidity: {current.humidity}%</div>
+                    <div className="wind">Wind: {wind}</div>
+                </div>
+            </article>
         </React.Fragment>
     )
 }

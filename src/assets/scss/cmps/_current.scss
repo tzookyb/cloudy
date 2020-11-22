@@ -1,3 +1,12 @@
+.current-title {
+    h3 {
+        display: inline;
+    }
+    small {
+        font-weight: 600;
+    }
+}
+
 .current {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -9,15 +18,17 @@
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
+
     .condition-img {
         grid-area: 1 / 1 / span 3 / span 2;
         align-self: flex-start;
-        img {
-            max-height: 120px;
-        }
+        max-width: 200px;
+        max-height: 200px;
     }
     .condition {
-        grid-area: 3 / 3 / span 1 / span 3;
+        grid-area: 2 / 1 / span 1 / span 6;
+        justify-self: center;
+        z-index: 2;
     }
     .temp {
         grid-area: 4 / 1 / span 1 / span 3;
@@ -30,13 +41,14 @@
     .local-time {
         grid-area: 1 / 4 / span 1 / span 3;
         justify-self: end;
-    }
-    .last-update {
-        grid-area: 2 / 5 / span 1 / span 3;
+        align-self: flex-start;
     }
     .extra-info {
         grid-area: 5 / 4 / span 3 / span 3;
         justify-self: end;
         align-self: end;
+        >*{
+            margin-bottom: 5px;
+        }
     }
 }

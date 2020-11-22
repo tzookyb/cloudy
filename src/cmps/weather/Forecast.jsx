@@ -21,8 +21,6 @@ export default function Forecast({ isMetric, forecast }) {
                         <div className="wind">Max wind: {wind}</div>
                         <div className="rain">Rain chance: {day.daily_chance_of_rain}%</div>
                         <div className="snow">Snow chance: {day.daily_chance_of_snow}%</div>
-
-
                     </div>
                 })}
             </article>
