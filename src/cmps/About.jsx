@@ -9,12 +9,13 @@ export const About = () => {
             <div className="about flex column">
 
                 <h1>About</h1>
-                <p>This is a weather app I created.</p>
+                <p>This is a weather app I created to experiment with MobX State Management.</p>
                 <p>It's main features are:</p>
                 <ul>
-                    <li>Finding out your location</li>
-                    <li>Searching for other locations</li>
-                    <li>Getting weather forecast using weatherapi.com</li>
+                    <li>Clock + Date</li>
+                    <li>Weather forecast for your geolocation</li>
+                    <li>Weather forecast for other locations</li>
+                    <li>Information represented in Metric/Imperial system</li>
                 </ul>
 
                 <h4>This app has been coded using these technologies:</h4>
@@ -23,6 +24,7 @@ export const About = () => {
                     <div><img alt="mobx" src={mobx} />MobX</div>
                     <div><img alt="sass" src={sassSvg} />Sass</div>
                 </div>
+                <h4>Weather information by WeatherAPI.com</h4>
 
             </div>
         </section>
