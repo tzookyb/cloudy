@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { store } from './store'
 // CMPS
 import Header from './cmps/Header'
@@ -23,11 +23,8 @@ export default function App() {
         <main>
           <TimeDate />
           <Switch>
-            <Route exact path="/">
-              <Redirect to="/weather" />
-            </Route>
             <Route component={About} path="/about" />
-            <Route component={Weather} path="/weather" />
+            <Route component={Weather} path="/" />
           </Switch>
         </main>
         <Footer />

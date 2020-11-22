@@ -9,7 +9,6 @@ export default function Header() {
 
     const routeTo = (route) => {
         if (isOpen) setIsOpen(false);
-        console.log("routeTo -> history", history)
         history.push(route);
     }
 
