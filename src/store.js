@@ -8,7 +8,6 @@ export const store = makeAutoObservable({
     locationCoords: null,
     weatherInfo: null
 })
-window.store = store;
 
 autorun(() => {
     if (store.locationCoords) {

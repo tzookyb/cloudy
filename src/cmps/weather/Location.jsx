@@ -9,7 +9,7 @@ import { WindMillLoading } from 'react-loadingg';
 
 export const Location = observer(() => {
     const store = useContext(StoreContext);
-    const { locationMode } = store;
+    const { locationMode, locationCoords } = store;
     const [searchTerm, setSearchTerm] = useState('');
     const [isSearching, setIsSearching] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
@@ -39,7 +39,10 @@ export const Location = observer(() => {
     }, [locationMode])
 
     const handleInput = (value) => {
-        runInAction(() => store.weatherInfo = null);
+        runInAction(() => {
+            store.locationCoords = null
+            store.weatherInfo = null
+        });
         setSuggestions([]);
         setSearchTerm(value);
         setIsSearching(true);
@@ -48,8 +51,10 @@ export const Location = observer(() => {
     }
 
     const pickLocation = (place) => {
+        const coords = { lat: place.lat, lng: place.lon };
+        runInAction(() => store.locationCoords = coords);
         setSuggestions([]);
-        setSearchTerm(place);
+        setSearchTerm(place.name);
     }
 
     const debouncedSearch = useRef(_.debounce((value) => {
@@ -75,7 +80,7 @@ export const Location = observer(() => {
             <div>
 
                 {!isMyLocation && isSearching && <WindMillLoading size="large" className="loading" />}
-                {!isMyLocation && !!searchTerm && <Suggestions isSearching={isSearching} pickLocation={pickLocation} places={suggestions} setSearchTerm={setSearchTerm} />}
+                {!isMyLocation && !locationCoords && !!searchTerm && <Suggestions isSearching={isSearching} pickLocation={pickLocation} places={suggestions} setSearchTerm={setSearchTerm} />}
 
 
             </div>
