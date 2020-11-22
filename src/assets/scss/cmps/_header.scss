@@ -22,20 +22,21 @@ header {
     background-color: $clr3;
     opacity: 0.6;
     margin-bottom: 10px;
-}
 
-h1 {
-    background-image: linear-gradient(to bottom right, black, rgb(9, 83, 243));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    h1 {
+        background-image: linear-gradient(to bottom right, black, rgb(9, 83, 243));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .logo {
-    height: 70px;
+    height: 60px;
     width: auto;
 }
 
 nav {
+    margin-inline-start: 60px;
     font-weight: bold;
     li {
         padding: 10px;
@@ -53,22 +54,25 @@ nav {
     }
 
     nav {
+        margin-inline-start: initial;
         background-image: linear-gradient(220deg, $clr2, $clr4);
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: $clr1;
         transform: translate3d(100%, 0, 0);
         ul {
+            width: 100%;
             flex-direction: column;
             align-items: initial !important;
             font-size: 1.5rem;
+            box-shadow: 0 5px 10px;
         }
         li {
-            padding: 15px;
+            padding: 15px 90px;
             &:not(:last-child) {
-                border-bottom: groove 5px $clr2;
+                border-bottom: groove 3px $clr2;
             }
             &:hover {
                 background-image: linear-gradient(220deg, white, $clr4);

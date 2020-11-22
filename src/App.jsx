@@ -24,7 +24,7 @@ export default function App() {
           <TimeDate />
           <Switch>
             <Route exact path="/">
-              <Redirect to="/about" />
+              <Redirect to="/weather" />
             </Route>
             <Route component={About} path="/about" />
             <Route component={Weather} path="/weather" />

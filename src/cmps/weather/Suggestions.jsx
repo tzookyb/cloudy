@@ -11,10 +11,10 @@ export const Suggestions = ({ places, pickLocation, searchTerm, setSearchTerm })
         store.locationCoords = coords;
     })
     if (!places.length && searchTerm) return (
-        <React.Fragment>
-            <h3 className="no-results flex justify-center">No results found...</h3>
+        <div className="no-results flex column align-center">
+            <h3 className="mb5">No results found...</h3>
             <button onClick={() => setSearchTerm('')}>Clear search</button>
-        </React.Fragment>
+        </div>
     )
 
     return (

@@ -1,0 +1,16 @@
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, auto);
+    border: 1px solid $clr4;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    justify-items: center;
+    > * {
+        text-align: center;
+    }
+    > *:not(:last-child) {
+        border-right: 1px solid $clr4;
+    }
+}

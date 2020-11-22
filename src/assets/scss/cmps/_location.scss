@@ -1,14 +1,9 @@
 .location {
     padding: 10px;
-    margin: 5px 0;
+    margin: rem(10px) 0;
     width: 90vw;
     max-width: 600px;
     border-radius: 10px;
     font-size: 1rem;
     color: black;
-}
-
-.loading {
-    position: relative;
-    
 }

@@ -14,7 +14,6 @@ autorun(() => {
     if (store.locationCoords) {
         weatherService.getForecast(store.locationCoords)
             .then(res => {
-            console.log("res", res)
                 runInAction(() => store.weatherInfo = res);
             })
     };

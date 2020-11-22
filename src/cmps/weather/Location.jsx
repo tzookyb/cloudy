@@ -13,13 +13,17 @@ export const Location = observer(() => {
     const [searchTerm, setSearchTerm] = useState('');
     const [isSearching, setIsSearching] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
-    const inputref = useRef(null);
+    const inputRef = useRef(null);
     const isMyLocation = locationMode === 'my-location';
 
     useEffect(() => {
         debouncedSearch(null);
         setSearchTerm('');
         setIsSearching(false);
+        if (locationMode === 'places') {
+            inputRef.current.focus()
+            return;
+        }
         if (isMyLocation) {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition((position) => {
@@ -35,6 +39,7 @@ export const Location = observer(() => {
     }, [locationMode])
 
     const handleInput = (value) => {
+        console.log(value);
         setSearchTerm(value);
         setIsSearching(true);
         debouncedSearch(value);
@@ -55,11 +60,10 @@ export const Location = observer(() => {
             })
     }, 1500)).current;
 
-
     return (
         <div>
             <input
-                ref={inputref}
+                ref={inputRef}
                 className="location"
                 type="search"
                 value={searchTerm}
@@ -69,9 +73,9 @@ export const Location = observer(() => {
             />
             <div>
 
-                {!isMyLocation && isSearching ? <WindMillLoading size="large" className="loading" /> :
-                    <Suggestions searchTerm={searchTerm} pickLocation={pickLocation} places={suggestions} />
-                }
+                {!isMyLocation && isSearching && <WindMillLoading size="large" className="loading" />}
+                {!!suggestions.length && <Suggestions searchTerm={searchTerm} pickLocation={pickLocation} places={suggestions} setSearchTerm={setSearchTerm} />}
+
 
             </div>
         </div>
