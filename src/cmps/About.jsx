@@ -3,7 +3,7 @@ import reactSvg from '../assets/svg/react-original.svg'
 import mobx from '../assets/svg/mobx.svg'
 import sassSvg from '../assets/svg/sass-original.svg'
 
-export default function About() {
+export const About = () => {
     return (
         <section className="main-container">
             <div className="about flex column">

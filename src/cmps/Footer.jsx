@@ -1,7 +1,8 @@
 import React from 'react'
 import github from '../assets/svg/github-original.svg'
 import linkedin from '../assets/svg/linkedin-original.svg'
-export default function Footer() {
+
+export const Footer = () => {
     return (
         <footer className="flex align-center space-between">
             <div className="flex align-center gap5">

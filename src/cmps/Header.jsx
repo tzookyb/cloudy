@@ -3,7 +3,7 @@ import { Twirl as Hamburger } from 'hamburger-react'
 import { useHistory } from 'react-router-dom';
 import { TempToggle } from './weather/TempToggle';
 
-export default function Header() {
+export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const history = useHistory();
 
@@ -15,16 +15,16 @@ export default function Header() {
     return (
         <header className={`main-container ${isOpen ? 'open' : ''}`}>
             <div className="flex align-center space-between">
-                <div className="flex gap5 align-center">
-                    <img src={require('../assets/img/logo.png').default} alt="logo" className="logo" />
-                    <h1>Cloudy</h1>
-                <nav className="flex align-center">
-                    <ul className="clean-list flex align-center">
-                        <li onClick={() => routeTo('/about')}>About</li>
-                        <li onClick={() => routeTo('/weather')}>Weather</li>
-                    </ul>
+                <div className="flex gap5 align-center cursor-pointer">
+                    <img onClick={() => history.push('/')} src={require('../assets/img/logo.png').default} alt="logo" className="logo" />
+                    <h1 onClick={() => history.push('/')}>Cloudy</h1>
+                    <nav className="flex align-center">
+                        <ul className="clean-list flex align-center">
+                            <li onClick={() => routeTo('/about')}>About</li>
+                            <li onClick={() => routeTo('/weather')}>Weather</li>
+                        </ul>
 
-                </nav>
+                    </nav>
                 </div>
                 <TempToggle />
                 <Hamburger
