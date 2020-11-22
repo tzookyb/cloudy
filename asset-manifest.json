@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cloudy/static/css/main.4988ae86.chunk.css",
-    "main.js": "/cloudy/static/js/main.40fc7d18.chunk.js",
-    "main.js.map": "/cloudy/static/js/main.40fc7d18.chunk.js.map",
+    "main.css": "/cloudy/static/css/main.49a2a51e.chunk.css",
+    "main.js": "/cloudy/static/js/main.bc10fb73.chunk.js",
+    "main.js.map": "/cloudy/static/js/main.bc10fb73.chunk.js.map",
     "runtime-main.js": "/cloudy/static/js/runtime-main.c32e614d.js",
     "runtime-main.js.map": "/cloudy/static/js/runtime-main.c32e614d.js.map",
     "static/js/2.4fb8499e.chunk.js": "/cloudy/static/js/2.4fb8499e.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.1cb1aa90.chunk.js": "/cloudy/static/js/3.1cb1aa90.chunk.js",
     "static/js/3.1cb1aa90.chunk.js.map": "/cloudy/static/js/3.1cb1aa90.chunk.js.map",
     "index.html": "/cloudy/index.html",
-    "static/css/main.4988ae86.chunk.css.map": "/cloudy/static/css/main.4988ae86.chunk.css.map",
+    "static/css/main.49a2a51e.chunk.css.map": "/cloudy/static/css/main.49a2a51e.chunk.css.map",
     "static/js/2.4fb8499e.chunk.js.LICENSE.txt": "/cloudy/static/js/2.4fb8499e.chunk.js.LICENSE.txt",
     "static/media/global.scss": "/cloudy/static/media/bg.2427a6dd.jpg",
     "static/media/github-original.fad4b944.svg": "/cloudy/static/media/github-original.fad4b944.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.c32e614d.js",
     "static/js/2.4fb8499e.chunk.js",
-    "static/css/main.4988ae86.chunk.css",
-    "static/js/main.40fc7d18.chunk.js"
+    "static/css/main.49a2a51e.chunk.css",
+    "static/js/main.bc10fb73.chunk.js"
   ]
 }
